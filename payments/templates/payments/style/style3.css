@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma;
+    background-color: dodgerblue;
+}
+
+.pay {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+h2 {
+    color: white;
+}
+
+
+header {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
