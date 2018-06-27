@@ -25,12 +25,22 @@ body {
    
 }
 
-h1{
-    color:black;
+.thanks 
+{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%)
+}
+
+h1 {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
-    background-image: url(images/thanks2.jpg);
+
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -52,9 +62,10 @@ header {
 
 }
 
-li{
+li {
     font-size: 110%;
     margin: 15px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .main-nav li a
@@ -63,12 +74,13 @@ li{
     text-decoration: none;
     font-size:90%;
     font-weight:bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .main-nav li a:hover
 {
-    color:dodgerblue;
-    border-bottom:2px solid dodgerblue;
+    color:black;
+    border-bottom:2px solid black;
     transition:all 0.5s ease-in;
     padding:1px 0;
 }
@@ -81,6 +93,7 @@ li{
     border-radius: 12px;
     margin-right: 15px;
     font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .button-awesome 
@@ -94,7 +107,7 @@ li{
 
 .btn-half:hover
 {
-    background-color:dodgerblue;
+    background-color:gray;
     transition:all 0.5s ease-in;
     margin-bottom:0px;
 }

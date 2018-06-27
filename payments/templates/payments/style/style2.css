@@ -33,6 +33,7 @@ img {
 
 h1 {
     color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
@@ -47,7 +48,8 @@ header {
     border-radius: 12px;
     margin-right: 15px;
     font-weight: bold;
-    font-size:150%;
+    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .button-goback {
