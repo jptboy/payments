@@ -71,4 +71,4 @@ def payments(request):
 def success(request):
     return render(request,"payments/foo.html")
 def error(request):
-    return HttpResponse("error")
+    return render(request,"payments/bar.html")
