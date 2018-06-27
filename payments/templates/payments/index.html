@@ -22,7 +22,8 @@
             color: black;
         }
 
-        .pay {
+        .pay 
+        {
             position: absolute;
             width: 1140px;
             top: 50%;
@@ -36,6 +37,32 @@
             background-size: cover;
         }
 
+        .dropin-container 
+        {
+            position: absolute;
+            width: 1140px;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
+
+        .submit
+        {
+            position: absolute;
+            width: 1140px;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
+
+        .payment
+        {
+            position: absolute;
+            width: 1140px;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
 
     </style>
 
@@ -52,9 +79,9 @@
       </div>
     
       <header>
-          <div id="dropin-container"></div>
-          <button id="submit-button">Select this Card</button>
-          <script>
+          <div id="dropin-container">
+
+              <script>
               csrf="{{csrf_token}}"
               var button = document.querySelector('#submit-button');
               var paymentamt=document.getElementById('payment_val').value
@@ -69,9 +96,20 @@
                   });
                 });
               });
-          </script>
+              </script>
+
+          </div>
+
+          <div class="submit">
+              <button id="submit-button">Select this Card</button>
+          </div>
+
           <br>
-          <button id="payment-button" onclick="foobar();">Confirm</button>
+
+          <div class="payment">
+              <button id="payment-button" onclick="foobar();">Confirm</button>
+          </div>
+
       </header>
 
 
