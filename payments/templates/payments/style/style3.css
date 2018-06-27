@@ -6,6 +6,8 @@
 body {
     font-family: Tahoma;
     background-color: dodgerblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
 }
 
 .pay {
@@ -15,11 +17,6 @@ body {
     left: 50%;
     transform: translate(-50%,-50%)
 }
-
-h2 {
-    color: white;
-}
-
 
 header {
     height: 100vh;
