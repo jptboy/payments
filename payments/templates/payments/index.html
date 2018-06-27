@@ -9,7 +9,6 @@
 
     <!-- using style3.css -->
     <style type="text/css">
-
         * {
             margin: 0;
             padding: 0;
@@ -22,11 +21,10 @@
             color: black;
         }
 
-        .pay 
-        {
+        .pay {
             position: absolute;
             width: 1140px;
-            top: 50%;
+            top: 20%;
             left: 50%;
             transform: translate(-50%,-50%)
         }
@@ -37,8 +35,7 @@
             background-size: cover;
         }
 
-        .dropin-container 
-        {
+        .dropin-container {
             position: absolute;
             width: 1140px;
             top: 60%;
@@ -46,42 +43,55 @@
             transform: translate(-50%,-50%)
         }
 
-        .submit
-        {
+        .submit {
             position: absolute;
             width: 1140px;
-            top: 65%;
+            top: 60%;
             left: 50%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 110%;
             transform: translate(-50%,-50%)
         }
 
-        .payment
-        {
+        .payment {
             position: absolute;
             width: 1140px;
-            top: 70%;
+            top: 64%;
             left: 50%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 110%;
             transform: translate(-50%,-50%)
         }
-
     </style>
 
-  </head>
-  <body>
-    
-    
-      <div class="pay">
-          <h1>Pay Now</h1>
-          <br>
-          <h2>Enter your payment amount</h2>
-          <br>
-          <input type="number" step="0.01" min="0" id="payment_val" />
-      </div>
-    
-      <header>
-          <div id="dropin-container">
+</head>
+<body>
 
-              <script>
+
+    <div class="pay">
+        <h1>Pay Now</h1>
+        <br>
+        <h2>Enter your payment amount</h2>
+        <br>
+        <input type="number" step="0.01" min="0" id="payment_val" />
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <div id="dropin-container"></div>
+
+        <script>
               csrf="{{csrf_token}}"
               var button = document.querySelector('#submit-button');
               var paymentamt=document.getElementById('payment_val').value
@@ -96,22 +106,20 @@
                   });
                 });
               });
-              </script>
+        </script>
 
-          </div>
+        <div class="submit">
+            <button id="submit-button">Select this Card</button>
+        </div>
 
-          <div class="submit">
-              <button id="submit-button">Select this Card</button>
-          </div>
+        <br>
 
-          <br>
+        <div class="payment">
+            <button id="payment-button" onclick="foobar();">Confirm</button>
+        </div>
 
-          <div class="payment">
-              <button id="payment-button" onclick="foobar();">Confirm</button>
-          </div>
-
-      </header>
+    </header>
 
 
 
-  </body>
+</body>
