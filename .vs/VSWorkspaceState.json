@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\payments"
+    "\\payments",
+    "\\payments\\templates",
+    "\\payments\\templates\\payments",
+    "\\paymenttesting"
   ],
-  "SelectedNode": "\\payments\\templates",
+  "SelectedNode": "\\paymenttesting\\urls.py",
   "PreviewInSolutionExplorer": false
 }

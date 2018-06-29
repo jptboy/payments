@@ -17,16 +17,15 @@
         body {
             font-family: Tahoma;
             background-color: dodgerblue;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Calibri light', sans-serif;
             color: black;
         }
 
-        .pay {
-            position: absolute;
-            width: 1140px;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%,-50%)
+        #pay {
+            width: 960px;
+            padding: 100px 100px 60px 100px;
+            height: 73px;
+            font-family: 'Calibri light', sans-serif;
         }
 
         header {
@@ -35,84 +34,74 @@
             background-size: cover;
         }
 
-        h1, h2 {
-            font-family: 'Calibri light', sans-serif;
+        h1 {
+            font-size: 300%;
+            left: 50%;
         }
 
         .dropin-container {
             position: absolute;
             width: 1140px;
-            top: 60%;
+            top: 64%;
             left: 50%;
             transform: translate(-50%,-50%)
         }
 
-        .select {
+        #select {
             position: absolute;
             width: 1140px;
-            top: 60%;
-            left: 50%;
             font-family: 'Calibri light', sans-serif;
             font-size: 110%;
-            transform: translate(-50%,-50%)
+            float: left;
+            top: 560px;
+            left: 100px;
         }
 
-        .confirm {
+        #confirm {
             position: absolute;
             width: 1140px;
-            top: 60%;
-            left: 66%;
+            top: 620px;
+            left: 100px;
             font-family: 'Calibri light', sans-serif;
             font-size: 110%;
-            transform: translate(-50%,-50%)
+            float: left;
         }
 
         #select-button {
-            opacity: 0.4;
             cursor: pointer;
-            border: 1px solid white;
+            border: 1px solid grey;
             padding: 10px 60px;
+            font-family: 'Calibri light', sans-serif;
+            font-size: 120%;
         }
 
         #confirm-button {
-            opacity: 0.4;
             cursor: pointer;
-            border: 1px solid white;
+            border: 1px solid grey;
             padding: 10px 40px;
-        }
-
-        .selectCover {
-            bottom: 647px;
-            left: 15.8%;
-            position: relative;
-            background: grey;
-            padding: 8px 50px;
-            color: black;
             font-family: 'Calibri light', sans-serif;
             font-size: 120%;
         }
 
-        .confirmCover {
-            bottom: 647px;
-            left: 18.3%;
-            position: relative;
-            background: grey;
-            padding: 8px 36px;
-            color: black;
-            font-family: 'Calibri light', sans-serif;
-            font-size: 120%;
-        }
-
-        .selectCover:hover {
+        #select-button:hover {
             background: black;
             color: grey;
             transition: all 0.3s ease-in;
         }
 
-        .confirmCover:hover {
+        #confirm-button:hover {
             background: black;
             color: grey;
             transition: all 0.3s ease-in;
+        }
+
+        #left-column {
+            float: left;
+            height: 100px;
+        }
+
+        #right-column {
+            float: left;
         }
 
     </style>
@@ -121,7 +110,7 @@
 <body>
 
 
-    <div class="pay">
+    <div id="pay">
         <h1>Pay Now</h1>
         <br>
         <h2>Enter your payment amount</h2>
@@ -129,25 +118,11 @@
         <input type="number" step="0.01" min="0" id="payment_val" />
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
 
     <header>
         <div id="dropin-container"></div>
 
-        <div class="select">
+        <div id="select">
             <button id="select-button">Select this Card</button>
         </div>
         
@@ -168,25 +143,22 @@
               });
         </script>
 
-        <div class="confirm">
+        <div id="confirm">
             <button id="confirm-button" onclick="foobar();">Confirm</button>
         </div>
 
     </header>
 
-    <span class="selectCover">Select this card</span>
-    <span class="confirmCover">Confirm</span>
-
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 
     <script>
-        $(".selectCover").bind("click", function () {
+        $("#selectCover").bind("click", function () {
             $("#select-button").click();
         })
     </script>
 
     <script>
-        $(".confirmCover").bind("click", function () {
+        $("#confirmCover").bind("click", function () {
             $("#confirm-button").click();
         })
     </script>
