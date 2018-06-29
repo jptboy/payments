@@ -28,6 +28,12 @@
             font-family: 'Calibri light', sans-serif;
         }
 
+        #center
+        {
+            padding: 0px 0px 60px 100px;
+            width: 50%;
+        }
+
         header {
             height: 100vh;
             background-position: center;
@@ -46,6 +52,7 @@
             left: 50%;
             transform: translate(-50%,-50%)
         }
+
 
         #select {
             position: absolute;
@@ -115,11 +122,10 @@
         <br>
         <h2>Enter your payment amount</h2>
         <br>
-        <input type="number" step="0.01" min="0" id="payment_val" />
+        <input type="number" step="5" min="0" id="payment_val" />
     </div>
 
-
-    <header>
+<div id = "center">
         <div id="dropin-container"></div>
 
         <div id="select">
@@ -127,6 +133,7 @@
         </div>
         
         <script>
+
               csrf="{{csrf_token}}"
               var button = document.querySelector('#select-button');
               var paymentamt=document.getElementById('payment_val').value
@@ -147,7 +154,6 @@
             <button id="confirm-button" onclick="foobar();">Confirm</button>
         </div>
 
-    </header>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 
@@ -162,5 +168,5 @@
             $("#confirm-button").click();
         })
     </script>
-
+</div>
 </body>
