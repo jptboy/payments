@@ -101,11 +101,10 @@
 <div id = "center">
         <div id="dropin-container"></div>
 
-        
             <button id="select-button">Select this Card</button>
             <br>
             <br>
-        <script>
+
               csrf="{{csrf_token}}"
               var button = document.querySelector('#select-button');
               var paymentamt=document.getElementById('payment_val').value
@@ -120,11 +119,9 @@
                   });
                 });
               });
-        </script>
-
+            </script>
         
             <button id="confirm-button" onclick="foobar();">Confirm</button>
-            
 
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
