@@ -35,6 +35,10 @@
             background-size: cover;
         }
 
+        h1, h2 {
+            font-family: 'Calibri light', sans-serif;
+        }
+
         .dropin-container {
             position: absolute;
             width: 1140px;
@@ -43,25 +47,74 @@
             transform: translate(-50%,-50%)
         }
 
-        .submit {
+        .select {
             position: absolute;
             width: 1140px;
             top: 60%;
             left: 50%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Calibri light', sans-serif;
             font-size: 110%;
             transform: translate(-50%,-50%)
         }
 
-        .payment {
+        .confirm {
             position: absolute;
             width: 1140px;
-            top: 64%;
-            left: 50%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            top: 60%;
+            left: 66%;
+            font-family: 'Calibri light', sans-serif;
             font-size: 110%;
             transform: translate(-50%,-50%)
         }
+
+        #select-button {
+            opacity: 0.4;
+            cursor: pointer;
+            border: 1px solid white;
+            padding: 10px 60px;
+        }
+
+        #confirm-button {
+            opacity: 0.4;
+            cursor: pointer;
+            border: 1px solid white;
+            padding: 10px 40px;
+        }
+
+        .selectCover {
+            bottom: 647px;
+            left: 15.8%;
+            position: relative;
+            background: grey;
+            padding: 8px 50px;
+            color: black;
+            font-family: 'Calibri light', sans-serif;
+            font-size: 120%;
+        }
+
+        .confirmCover {
+            bottom: 647px;
+            left: 18.3%;
+            position: relative;
+            background: grey;
+            padding: 8px 36px;
+            color: black;
+            font-family: 'Calibri light', sans-serif;
+            font-size: 120%;
+        }
+
+        .selectCover:hover {
+            background: black;
+            color: grey;
+            transition: all 0.3s ease-in;
+        }
+
+        .confirmCover:hover {
+            background: black;
+            color: grey;
+            transition: all 0.3s ease-in;
+        }
+
     </style>
 
 </head>
@@ -87,13 +140,20 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+
 
     <header>
         <div id="dropin-container"></div>
 
+        <div class="select">
+            <button id="select-button">Select this Card</button>
+        </div>
+        
         <script>
               csrf="{{csrf_token}}"
-              var button = document.querySelector('#submit-button');
+              var button = document.querySelector('#select-button');
               var paymentamt=document.getElementById('payment_val').value
               braintree.dropin.create({
                 authorization: "{{token}}",
@@ -108,18 +168,27 @@
               });
         </script>
 
-        <div class="submit">
-            <button id="submit-button">Select this Card</button>
-        </div>
-
-        <br>
-
-        <div class="payment">
-            <button id="payment-button" onclick="foobar();">Confirm</button>
+        <div class="confirm">
+            <button id="confirm-button" onclick="foobar();">Confirm</button>
         </div>
 
     </header>
 
+    <span class="selectCover">Select this card</span>
+    <span class="confirmCover">Confirm</span>
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+    <script>
+        $(".selectCover").bind("click", function () {
+            $("#select-button").click();
+        })
+    </script>
+
+    <script>
+        $(".confirmCover").bind("click", function () {
+            $("#confirm-button").click();
+        })
+    </script>
 
 </body>
