@@ -122,11 +122,11 @@
     <header>
         <div id="dropin-container"></div>
 
-        <div id="select">
-            <button id="select-button">Select this Card</button>
-        </div>
-        
-        <script>
+            <div id="select">
+                <button id="select-button">Select this Card</button>
+            </div>
+
+            <script>
               csrf="{{csrf_token}}"
               var button = document.querySelector('#select-button');
               var paymentamt=document.getElementById('payment_val').value
@@ -141,11 +141,13 @@
                   });
                 });
               });
-        </script>
+            </script>
 
-        <div id="confirm">
-            <button id="confirm-button" onclick="foobar();">Confirm</button>
-        </div>
+            <div id="confirm">
+                <button id="confirm-button" onclick="foobar();">Confirm</button>
+            </div>
+
+
 
     </header>
 
