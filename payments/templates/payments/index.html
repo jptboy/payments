@@ -1,172 +1,42 @@
-﻿{% load staticfiles %}
-<!DOCTYPE <!DOCTYPE html>
+﻿<!DOCTYPE <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <script src="https://js.braintreegateway.com/web/dropin/1.11.0/js/dropin.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
     <script src="http://yourjavascript.com/1428632661/script.js"></script>
-    <title>Payment</title>
-
-    <!-- using style3.css -->
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Tahoma;
-            background-color: dodgerblue;
-            font-family: 'Calibri light', sans-serif;
-            color: black;
-        }
-
-        #pay {
-            width: 960px;
-            padding: 100px 100px 60px 100px;
-            height: 73px;
-            font-family: 'Calibri light', sans-serif;
-        }
-
-        #center
-        {
-            padding: 0px 0px 60px 100px;
-            width: 50%;
-        }
-
-        header {
-            height: 100vh;
-            background-position: center;
-            background-size: cover;
-        }
-
-        h1 {
-            font-size: 300%;
-            left: 50%;
-        }
-
-        .dropin-container {
-            position: absolute;
-            width: 1140px;
-            top: 64%;
-            left: 50%;
-            transform: translate(-50%,-50%)
-        }
-
-
-        #select {
-            position: absolute;
-            width: 1140px;
-            font-family: 'Calibri light', sans-serif;
-            font-size: 110%;
-            float: left;
-            top: 560px;
-            left: 100px;
-        }
-
-        #confirm {
-            position: absolute;
-            width: 1140px;
-            top: 620px;
-            left: 100px;
-            font-family: 'Calibri light', sans-serif;
-            font-size: 110%;
-            float: left;
-        }
-
-        #select-button {
-            cursor: pointer;
-            border: 1px solid grey;
-            padding: 10px 60px;
-            font-family: 'Calibri light', sans-serif;
-            font-size: 120%;
-        }
-
-        #confirm-button {
-            cursor: pointer;
-            border: 1px solid grey;
-            padding: 10px 40px;
-            font-family: 'Calibri light', sans-serif;
-            font-size: 120%;
-        }
-
-        #select-button:hover {
-            background: black;
-            color: grey;
-            transition: all 0.3s ease-in;
-        }
-
-        #confirm-button:hover {
-            background: black;
-            color: grey;
-            transition: all 0.3s ease-in;
-        }
-
-        #left-column {
-            float: left;
-            height: 100px;
-        }
-
-        #right-column {
-            float: left;
-        }
-
-    </style>
-
-</head>
-<body>
-
-
-    <div id="pay">
-        <h1>Pay Now</h1>
-        <br>
-        <h2>Enter your payment amount</h2>
-        <br>
-        <input type="number" step="5" min="0" id="payment_val" />
+  </head>
+  <body>
+    
+    
+    <div>
+      <p1>Pay Now</p1>
     </div>
-
-<div id = "center">
-        <div id="dropin-container"></div>
-
-        <div id="select">
-            <button id="select-button">Select this Card</button>
-        </div>
-        
-        <script>
-
-              csrf="{{csrf_token}}"
-              var button = document.querySelector('#select-button');
-              var paymentamt=document.getElementById('payment_val').value
-              braintree.dropin.create({
-                authorization: "{{token}}",
-                container: '#dropin-container'
-              }, function (createErr, instance) {
-                button.addEventListener('click', function () {
-                  instance.requestPaymentMethod(function (err, payload) {
-                      nonce=payload.nonce
-                      buttonclicked=true
-                  });
-                });
-              });
-        </script>
-
-        <div id="confirm">
-            <button id="confirm-button" onclick="foobar();">Confirm</button>
-        </div>
-
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-
+    
+    
+    <div>
+        <label>Enter your payment amount</label>
+        <br>
+        <input type="number" step="0.01" min="0" id="payment_val"/>
+    </div>
+      
+    <div id="dropin-container"></div>
+    <button id="submit-button">Select this Card</button>
     <script>
-        $("#selectCover").bind("click", function () {
-            $("#select-button").click();
-        })
+      csrf="{{csrf_token}}"
+      var button = document.querySelector('#submit-button');
+      var paymentamt=document.getElementById('payment_val').value
+      braintree.dropin.create({
+        authorization: "{{token}}",
+        container: '#dropin-container'
+      }, function (createErr, instance) {
+        button.addEventListener('click', function () {
+          instance.requestPaymentMethod(function (err, payload) {
+              nonce=payload.nonce
+              buttonclicked=true
+          });
+        });
+      });
     </script>
-
-    <script>
-        $("#confirmCover").bind("click", function () {
-            $("#confirm-button").click();
-        })
-    </script>
-</div>
-</body>
+    <br>
+    <button id="payment-button" onclick="foobar();">Confirm</button>
+  </body>
