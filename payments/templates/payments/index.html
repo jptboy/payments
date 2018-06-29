@@ -53,8 +53,37 @@
             font-size: 110%;
             float: left;
         }
-        
-        
+        #select-button {
+            cursor: pointer;
+            border: 1px solid grey;
+            padding: 10px 60px;
+            font-family: 'Calibri light', sans-serif;
+            font-size: 120%;
+        }
+        #confirm-button {
+            cursor: pointer;
+            border: 1px solid grey;
+            padding: 10px 40px;
+            font-family: 'Calibri light', sans-serif;
+            font-size: 120%;
+        }
+        #select-button:hover {
+            background: black;
+            color: grey;
+            transition: all 0.3s ease-in;
+        }
+        #confirm-button:hover {
+            background: black;
+            color: grey;
+            transition: all 0.3s ease-in;
+        }
+        #left-column {
+            float: left;
+            height: 100px;
+        }
+        #right-column {
+            float: left;
+        }
     </style>
 
 </head>
@@ -72,9 +101,9 @@
 <div id = "center">
         <div id="dropin-container"></div>
 
-        <div id="select">
+        
             <button id="select-button">Select this Card</button>
-        </div>
+       
         
         <script>
               csrf="{{csrf_token}}"
@@ -93,9 +122,9 @@
               });
         </script>
 
-        <div id="confirm">
+        
             <button id="confirm-button" onclick="foobar();">Confirm</button>
-        </div>
+        
 
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
