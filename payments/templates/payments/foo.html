@@ -5,11 +5,6 @@
     <!-- using style.css -->
     <style type="text/css">
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         .row {
             max-width: 1600px;
             margin: 0 auto;
@@ -20,7 +15,7 @@
             background-color: dodgerblue;
         }
 
-        .hero {
+        #hero {
             position: absolute;
             width: 1140px;
             top: 15%;
@@ -28,7 +23,7 @@
             transform: translate(-50%,-50%)
         }
 
-        .thanks {
+        #thanks {
             position: absolute;
             width: 1140px;
             top: 50%;
@@ -55,10 +50,10 @@
             margin-top: 100px;
         }
 
-            .main-nav li {
-                margin-top: 20px;
-                margin-left: 0px;
-            }
+        .main-nav li {
+            margin-top: 20px;
+            margin-left: 0px;
+        }
 
         li {
             font-size: 130%;
@@ -74,12 +69,12 @@
             font-family: 'Calibri light', sans-serif;
         }
 
-            .main-nav li a:hover {
-                color: black;
-                border-bottom: 2px solid black;
-                transition: all 0.5s ease-in;
-                padding: 1px 0;
-            }
+        .main-nav li a:hover {
+            color: black;
+            border-bottom: 2px solid black;
+            transition: all 0.5s ease-in;
+            padding: 1px 0;
+        }
 
         .btn {
             border: 1px solid dodgerblue;
@@ -106,6 +101,22 @@
             transition: all 0.5s ease-in;
             margin-bottom: 0px;
         }
+
+        #container {
+
+            width: 1300px;
+            margin: 0px auto;
+
+        }
+
+        #left-column {
+            width: 80%;
+        }
+
+        #right-column {
+            width: 20%;
+        }
+
     </style>
 
 </head>
@@ -114,27 +125,36 @@
 
     <header>
 
-        <div class="row">
-            <ul class="main-nav">
+        <section id="left-column">
 
-                <li><a href="">VIEW YOUR PAYMENT <br /> HISTORY </a></li>
-                <li><a href="">OTHER WAYS TO SUPPORT <br /> THOSE IN NEED </a></li>
-                <li><a href="">ABOUT PARIBUS </a></li>
-                <li><a href="">CONTACT US </a></li>
+            <div class="row">
+                <ul class="main-nav">
 
-            </ul>
-        </div>
-        <div class="hero">
-            <h1>Thank you for your donation! <br /> Your generosity and compassion <br /> will go a long way</h1>
-        </div>
+                    <li><a href="">VIEW YOUR PAYMENT <br /> HISTORY </a></li>
+                    <li><a href="">OTHER WAYS TO SUPPORT <br /> THOSE IN NEED </a></li>
+                    <li><a href="">ABOUT PARIBUS </a></li>
+                    <li><a href="">CONTACT US </a></li>
 
-        <div class="thanks">
-            <img src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b24c5.png" />
-        </div>
+                </ul>
+            </div>
 
-        <div class="button-awesome">
-            <a href="" class="btn btn-half">Get more information about how your donations will be used</a>
-        </div>
+        </section>
+
+        <aside id="right-column">
+
+            <div id="hero">
+                <h1>Thank you for your donation! <br /> Your generosity and compassion <br /> will go a long way</h1>
+            </div>
+
+            <div id="thanks">
+                <img src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b24c5.png" />
+            </div>
+
+            <div class="button-awesome">
+                <a href="" class="btn btn-half">Get more information about how your donations will be used</a>
+            </div>
+
+        </aside>
     </header>
 
 
