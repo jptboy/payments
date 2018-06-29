@@ -1,5 +1,4 @@
-﻿{% load staticfiles %}
-<!DOCTYPE <!DOCTYPE html>
+﻿<!DOCTYPE <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <script src="https://js.braintreegateway.com/web/dropin/1.11.0/js/dropin.min.js"></script>
@@ -13,47 +12,39 @@
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: Tahoma;
             background-color: dodgerblue;
             font-family: 'Calibri light', sans-serif;
             color: black;
         }
-
         #pay {
             width: 960px;
             padding: 100px 100px 60px 100px;
             height: 73px;
             font-family: 'Calibri light', sans-serif;
-            margin: 100px 100px 60px 100px;
         }
-
         #center
         {
-            position: relative;
-            top:100px;
-            padding: 60px 0px 60px 100px;
+            padding: 0px 0px 60px 100px;
             width: 50%;
         }
-
         header {
             height: 100vh;
             background-position: center;
             background-size: cover;
         }
-
         h1 {
             font-size: 300%;
             left: 50%;
         }
-
-        #dropin-container {
-            position: relative;
-            
+        .dropin-container {
+            position: absolute;
+            width: 1140px;
+            top: 64%;
+            left: 50%;
+            transform: translate(-50%,-50%)
         }
-
-
         #select {
             position: absolute;
             width: 1140px;
@@ -63,7 +54,6 @@
             top: 560px;
             left: 100px;
         }
-
         #confirm {
             position: absolute;
             width: 1140px;
@@ -73,7 +63,6 @@
             font-size: 110%;
             float: left;
         }
-
         #select-button {
             cursor: pointer;
             border: 1px solid grey;
@@ -81,7 +70,6 @@
             font-family: 'Calibri light', sans-serif;
             font-size: 120%;
         }
-
         #confirm-button {
             cursor: pointer;
             border: 1px solid grey;
@@ -89,34 +77,30 @@
             font-family: 'Calibri light', sans-serif;
             font-size: 120%;
         }
-
         #select-button:hover {
             background: black;
             color: grey;
             transition: all 0.3s ease-in;
         }
-
         #confirm-button:hover {
             background: black;
             color: grey;
             transition: all 0.3s ease-in;
         }
-
         #left-column {
             float: left;
             height: 100px;
         }
-
         #right-column {
             float: left;
         }
-        
     </style>
 
 </head>
-
 <body>
-<div id="pay">
+
+
+    <div id="pay">
         <h1>Pay Now</h1>
         <br>
         <h2>Enter your payment amount</h2>
@@ -124,11 +108,7 @@
         <input type="number" step="5" min="0" id="payment_val" />
     </div>
 
-<div>
-    <button hidden="hidden">asdfasdf</button>
-</div>
-
-<div id = "center" >
+<div id = "center">
         <div id="dropin-container"></div>
 
         <div id="select">
@@ -136,7 +116,6 @@
         </div>
         
         <script>
-
               csrf="{{csrf_token}}"
               var button = document.querySelector('#select-button');
               var paymentamt=document.getElementById('payment_val').value
