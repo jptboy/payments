@@ -9,24 +9,6 @@
             background-color: dodgerblue;
         }
 
-        #hero {
-            align-content: center;
-            /*position: absolute;
-            /*width: 1140px;
-            top: 15%;
-            left: 70%;
-            /*transform: translate(-50%,-50%)*/
-        }
-
-        #thanks {
-            align-content: center;
-            /*position:absolute;
-            /*width: 1140px;
-            top: 50%;
-            left: 70%;
-            /*transform: translate(-50%,-50%)*/
-        }
-
         h1 {
             color: white;
             font-size: 200%;
@@ -34,8 +16,10 @@
         }
 
         #column {
-            width: 50%;
+            width: 100%;
             align-content: center;
+            vertical-align: center;
+            transform: translate(50%,50%);/*right, down*/
         }
 
     </style>
@@ -44,13 +28,9 @@
 
 <body>
     <div id="column">
-        <div id="hero">
             <h1>Thank you for your donation! <br /> Your generosity and compassion <br /> will go a long way</h1>
-        </div>
 
-        <div id="thanks">
-            <img src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b24c5.png" />
-        </div>
+            <img src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b24c5.png" width="20%" height="30%"/>
     </div>
 </body>
 </html>
