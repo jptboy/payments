@@ -5,32 +5,52 @@
     <!-- using style.css -->
     <style type="text/css">
         body {
-            font-family: Tahoma;
             background-color: dodgerblue;
         }
 
-        h1 {
-            color: white;
-            font-size: 200%;
-            font-family: 'Calibri light', sans-serif;
-        }
-
-        #column {
+        center 
+        {
             width: 100%;
-            align-content: center;
+            align-self: center;
+            height: 100%;
             vertical-align: center;
-            transform: translate(50%,50%);/*right, down*/
         }
 
+        p
+        {
+            font-size: 250%;
+            color: white;
+            font-family: 'Calibri Light', sans-serif;
+        }
+
+        #back-button {
+            cursor: pointer;
+            border: 1px solid lightslategrey;
+            padding: 10px 60px;
+            background: lightslategray;
+            font-family: 'Calibri light', sans-serif;
+            font-size: 90%;
+            color: white;
+            width: 245px;
+        }
+
+        #back-button:hover {
+            background:lightslategray;
+            border: 3px solid #01579B;
+            color:black;
+            transition: all 0.05s ease-in;
+        }
     </style>
 
 </head>
 
 <body>
-    <div id="column">
-            <h1>Thank you for your donation! <br /> Your generosity and compassion <br /> will go a long way</h1>
+    <center>
+        <p>Thank you for your donation! <br /> Your generosity and compassion <br /> will go a long way</p>
 
-            <img src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b24c5.png" width="20%" height="30%"/>
-    </div>
+        <img src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b24c5.png" width="20%" height="30%"/>
+        <br><br><br><br>
+        <a href="http://paymentenvpart2.pmberpqctj.us-west-2.elasticbeanstalk.com/"><button id="back-button">Go Back</button></a>
+    </center>  
 </body>
 </html>
