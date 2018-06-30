@@ -34,7 +34,10 @@
         h1 {
             font-size: 300%;
             left: 50%;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        h2{color:white;}
         
         #select {
             position: relative;
@@ -55,27 +58,35 @@
         }
         #select-button {
             cursor: pointer;
-            border: 1px solid grey;
+            border: 1px solid lightslategrey;
             padding: 10px 60px;
+            background: lightslategray;
             font-family: 'Calibri light', sans-serif;
             font-size: 120%;
+            color: white;
+            width: 32%;
         }
         #confirm-button {
             cursor: pointer;
-            border: 1px solid grey;
+            border: 1px solid lightslategrey;
+            background: lightslategray;
             padding: 10px 40px;
             font-family: 'Calibri light', sans-serif;
             font-size: 120%;
+            color: white;
+            width: 32%;
         }
         #select-button:hover {
-            background: black;
-            color: grey;
-            transition: all 0.3s ease-in;
+            background:lightslategray;
+            border: 3px solid #01579B;
+            color:black;
+            transition: all 0.05s ease-in;
         }
         #confirm-button:hover {
-            background: black;
-            color: grey;
-            transition: all 0.3s ease-in;
+            background: lightslategray;
+            border: 3px solid #01579B;
+            color: black;
+            transition: all 0.05s ease-in;
         }
         #left-column {
             float: left;
@@ -83,6 +94,16 @@
         }
         #right-column {
             float: left;
+        }
+
+        input
+        {
+            width:16%;
+            height: 5%;
+            border-radius: 0px;
+            border: white;
+            color: black;
+            font-size: 23px;
         }
     </style>
 
@@ -95,7 +116,7 @@
         
         <h2>Enter your payment amount</h2>
         <br>
-        <input type="number" step="5" min="0" id="payment_val" />
+        <input type="number" step="5" min="0" id="payment_val"/>
     </div>
     <button hidden="hidden">mane</button>
     <div id = "center">
